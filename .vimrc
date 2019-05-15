@@ -1,26 +1,25 @@
-execute pathogen#infect()
-
 syntax on
 
-filetype plugin indent on
+let mapleader = ","
 
-colorscheme perun
-
-set tabstop=4
 set shiftwidth=4
-
-set number
+set smartindent
+set tabstop=4
 
 inoremap jk <Esc>
 vnoremap jk <Esc>
-inoremap <Esc> <Nop>
+unmap <Esc>
 
-nnoremap gt :tabn <CR>
-nnoremap gT :tabp <CR>
+nnoremap <leader>c :!pandoc '%' -o '%:r'.pdf && zathura '%:r'.pdf<CR>
 
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 5, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 5, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 5, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 5, 4)<CR>
+" Plugins
+call plug#begin('~/.vim/plugged')
+Plug 'terryma/vim-smooth-scroll'
+Plug 'leafgarland/typescript-vim'
+call plug#end()
 
-set clipboard=unnamedplus
+" Smooth scroll
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 2, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 2, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 2, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 2, 4)<CR>

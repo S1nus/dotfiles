@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/s1nus/Prog/Flask-SocketIO/example'
-let g:netrw_dirhist_2='/home/s1nus/Prog/Flask-SocketIO/example/templates'
-let g:netrw_dirhist_3='/home/s1nus/Prog/bwhbot'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/s1nus/Prog/wallets/8'
+let g:netrw_dirhist_2='/home/s1nus/Prog/wallets'
+let g:netrw_dirhist_3='/home/s1nus/Prog/wallets/9'
+let g:netrw_dirhist_4='/home/s1nus/Prog/mlproject'
